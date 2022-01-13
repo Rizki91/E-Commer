@@ -13,6 +13,8 @@ public class ProdukMode implements Parcelable {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "ID")
     private int ID;
+    @ColumnInfo(name = "ID_KATEGORI")
+    private String ID_KATEGORI;
     @ColumnInfo(name = "ID_PRODUK")
     private String ID_PRODUK;
     @ColumnInfo(name = "NAMA_BARANG")
@@ -153,6 +155,15 @@ public class ProdukMode implements Parcelable {
         IMGS = in.readString();
         NAMA_KATEGORI = in.readString();
         CNT_BELI = in.readString();
+        ID_KATEGORI = in.readString();
+    }
+
+    public String getID_KATEGORI() {
+        return ID_KATEGORI;
+    }
+
+    public void setID_KATEGORI(String ID_KATEGORI) {
+        this.ID_KATEGORI = ID_KATEGORI;
     }
 
     public static final Creator<ProdukMode> CREATOR = new Creator<ProdukMode>() {
@@ -185,6 +196,7 @@ public class ProdukMode implements Parcelable {
         dest.writeString(DESKRIPSI);
         dest.writeString(IMGS);
         dest.writeString(NAMA_KATEGORI);
+        dest.writeString(ID_KATEGORI);
         dest.writeString(CNT_BELI);
     }
 }

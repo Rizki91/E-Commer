@@ -212,6 +212,7 @@ public class MainFargmen extends Fragment implements  AdapterMain.ItemClickListe
 
                         ProdukMode produkMode1 = new ProdukMode();
                         for(int i=0; i < data.getData().size(); i++){
+                            produkMode1.setID_KATEGORI(data.getData().get(i).getIdKategori());
                             produkMode1.setID_PRODUK(data.getData().get(i).getIdProduct());
                             produkMode1.setNAMA_BARANG(data.getData().get(i).getNamaBarang());
                             produkMode1.setHARGA(data.getData().get(i).getHarga());
