@@ -11,7 +11,7 @@ import java.util.List;
 @Dao
 public interface ProdukDao {
 
-    @Query("SELECT * FROM ProdukDb WHERE ID_PRODUK=:Id_Produk ")
+    @Query("SELECT * FROM ProdukDb WHERE ID_KATEGORI=:Id_Produk ")
     List<ProdukMode> getIdProduk(String Id_Produk);
 
     @Query("SELECT * FROM ProdukDb ")
